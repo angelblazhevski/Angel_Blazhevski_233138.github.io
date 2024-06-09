@@ -1,0 +1,138 @@
+.biografija{
+    padding: 0px 50px;
+}
+.navigacija{
+height: 100px;
+background-color: rgb(240, 225, 225);
+
+}
+.navdiv{
+display: inline;
+float: right;
+padding-top: 35px;
+position: relative;
+}
+a{
+text-decoration: none;
+padding-right:10px ;
+font-size:larger
+}
+a:hover{
+color: rgba(97, 86, 161, 0.678);
+}
+footer{
+height: 100px;
+background-color: rgb(240, 225, 225);
+text-align: center;
+}
+.futdiv{
+    padding-top: 35px;
+}
+.obrazovanie{
+border: black 1px solid;
+border-radius: 15px;
+height: fit-content;
+max-width: 300px;
+padding: 5px;
+text-align: justify;
+}
+.obrazovanie:hover{
+cursor: pointer;
+transition: background-color 1s ease;
+background-color: rgb(106, 106, 238);
+
+}
+.sliki{
+border-radius: 15px;
+}
+.obrz{
+display: flex;
+gap: 20px;
+justify-content: center;
+}
+.container {
+    width: 50vw; 
+    height: 50vh; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border: 1px solid #ccc; 
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 500%; 
+    height: 100%;
+   
+}
+.slide {
+    width: calc(100% / 5); 
+    flex-shrink: 0;
+    position: relative;
+}
+
+.slajd {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 1;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    z-index: 1;
+}
+.kontakt{
+width: 550px;
+height: fit-content;
+float: right;
+}
+form{
+width: fit-content;
+height: fit-content;
+}
+input{
+height: 70px;
+padding: 18px;
+border: 0;
+background: #EDEDED;
+}
+.posl{
+text-align: center;
+background-color: rgb(72, 72, 209) ;
+width:500px;
+}
+.posl:hover{
+opacity: 0.8;
+cursor: pointer;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="css.css">
+    </head>
+<body>
+    <nav class="navigacija">
+        <img src="sliki/finki.png" style="display: inline-block; height: 100px;width: 300px;"> 
+<div class="navdiv"> 
+<a href="home.html">Биографија</a>
+<a href="obrazovanie.html">Образование</a>
+<a href="vestini.html">Вештини</a>
+<a href="patuvanja.html">Патувања</a>
+<a href="kontakt.html">Контакт</a>
+</div>
+    </nav>
+    <br><br>
+<div class="biografija container">
+    <div class="slider">
+        <div class="slide">
+            <div class="caption">Грција</div>
+            <img src="sliki/grcija.jpg" class="slajd">
+        </div>
+        <div class="slide">
+            <div class="caption">Албанија</div>
+            <img src="sliki/albania.jpg" class="slajd">
+        </div>
+        <div class="slide">
+            <div class="caption">Црна Гора</div>
+            <img src="sliki/crnagora.jpg" class="slajd">
+        </div>
+            <div class="slide">
+                <div class="caption">Италија</div>
+                <img src="sliki/italija.jpg" class="slajd">
+            </div>
+                <div class="slide">
+                    <div class="caption">Бугарија</div>
+                    <img src="sliki/bugarija.jpg" class="slajd">
+                </div>     
+        </div>
+    <div class="prev" onclick="moveSlide(-1)">&lt;</div>
+    <div class="next" onclick="moveSlide(1)">&gt;</div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer >
+    <div class="futdiv">
+Песонална изработка со заштитени права &copy; Ангел Блажевски
+</footer></div>
+<script>
+    let slideIndex = 0;
+
+    function moveSlide(n) {
+        const slides = document.querySelectorAll('.slide');
+        const captions = document.querySelectorAll('.caption');
+
+        const totalSlides = slides.length;
+        captions.forEach(caption => {
+            caption.style.display = 'none';
+        });
+        slideIndex += n;
+
+        if (slideIndex >= totalSlides) {
+            slideIndex = 0;
+        }
+        if (slideIndex < 0) {
+            slideIndex = totalSlides - 1;
+        }
+        captions[slideIndex].style.display = 'block';
+
+        const slideWidth = slides[0].clientWidth;
+        document.querySelector('.slider').style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+    }
+
+    document.querySelectorAll('.caption').forEach((caption, index) => {
+        if (index === 0) {
+            caption.style.display = 'block';
+        } else {
+            caption.style.display = 'none';
+        }
+    });
+
+    moveSlide(0);
+</script>
+
+    </body>
+    </html>
